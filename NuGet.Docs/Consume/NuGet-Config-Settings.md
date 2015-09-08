@@ -12,12 +12,21 @@ Below is the summary of the NuGet config keys and their usage.
     <td>"repositoryPath" </td>
     <td>
        Allows  you to install the NuGet packages in the specified folder, instead of the default "$(Solutiondir)\Packages" folder. <br/>
-       This key can be added to the NuGet.config file manually or using the <a href="Command-Line-Reference#Config Command"> NuGet.exe Config -Set command.  </a>  <br/>
+       This key can be added to the NuGet.config file manually or using the <a href="Command-Line-Reference#Config Command"> NuGet.exe Config -Set command.  </a>  
+	   <br/>
        More details <a href="../Release-Notes/NuGet-2.1#Specify-%e2%80%98packages%e2%80%99-Folder-Location">here.</a>
 
 	<pre><code>
     &lt;config&gt;
      &lt;add key="repositorypath" value="C:\Temp" /&gt;
+    &lt;/config&gt;
+	</pre></code>
+
+       A relative path can be specified for this folder location using forward slashes.
+       <br/>
+	<pre><code>
+    &lt;config&gt;
+     &lt;add key="repositorypath" value="../myPackages" /&gt;
     &lt;/config&gt;
 	</pre></code>
 	
