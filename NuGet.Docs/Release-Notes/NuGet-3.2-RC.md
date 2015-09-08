@@ -41,6 +41,36 @@ There are a number of fixes to issues with various commands:
 
 A complete list of issues addressed in this release can be found in the NuGet GitHub [Command-Line milestone](https://github.com/nuget/home/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A3.2.0-commandline+is%3Aclosed+-label%3AClosedAs%3ADuplicate).
 
+### Compatibility
+
+###### Added Sept. 8, 2015
+
+There are some known compatibility issues with running nuget.exe on Linux or Mac OSX with Mono.  At the present time, we are not providing support for NuGet on these operating systems and we are reporting our preliminary findings of testing these features on Linux and Mac OSX.  The following commands work in simple scenarios:
+
+* Sources
+* setApiKey
+* List
+* Install
+* Restore
+* Sources
+* Push
+* Delete
+* Spec
+* Help
+* Config
+
+Commands that are partially working:
+
+* Restore for project files, restore does not work with Solution files
+* Pack works with nuspec files and does not work with project files
+
+The following command does not work:
+
+* Update
+
+Authenticated v3 feeds do not work at all.
+
+
 ## Visual Studio extension updates
 
 ### New Features in Visual Studio
@@ -101,3 +131,4 @@ A complete list of issues addressed for the Visual Studio extension can be found
 ## Known Issues
 
 We continue to track issues on our GitHub issues list which can be found at: [http://github.com/nuget/home/issues](http://github.com/nuget/home/issues)
+
